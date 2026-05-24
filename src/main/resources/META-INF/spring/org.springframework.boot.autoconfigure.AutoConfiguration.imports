@@ -1,0 +1,5 @@
+care.cuddliness.djcarl.autoconfig.DiscordCommandAutoConfiguration
+care.cuddliness.djcarl.autoconfig.JdaAutoConfiguration
+care.cuddliness.djcarl.autoconfig.JdaEventPublisherAutoConfiguration
+care.cuddliness.djcarl.autoconfig.ListenerAdapterAutoConfiguration
+care.cuddliness.djcarl.autoconfig.DiscordInteractionAutoConfig
