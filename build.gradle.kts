@@ -4,7 +4,9 @@ plugins {
     id("io.spring.dependency-management") version "1.1.7"
     id("io.freefair.lombok") version "9.1.0"
 }
-
+tasks.bootJar {
+    archiveFileName.set("djcarl.jar")
+}
 group = "care.cuddliness.djcarl"
 version = "1.0-SNAPSHOT"
 

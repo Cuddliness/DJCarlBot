@@ -1,11 +1,15 @@
-FROM eclipse-temurin:17-jre AS build
+FROM gradle:8.7-jdk17 AS build
 
-COPY . /src
+WORKDIR /src
+COPY . .
 
-RUN test -f /src/build/libs/djcarl.jar || /src/gradlew --project-dir /src bootJar
+RUN chmod +x gradlew
+RUN ./gradlew clean bootJar
 
 FROM eclipse-temurin:17-jre
 
-COPY --from=build /src/build/libs/djcarl.jar /app/djcarl.jar
+WORKDIR /app
 
-CMD java -jar /app/djcarl.jar
+COPY --from=build /src/build/libs/*.jar app.jar
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
