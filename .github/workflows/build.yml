@@ -1,0 +1,71 @@
+name: Build Release
+
+on:
+  push:
+    branches: ["*"]
+    paths-ignore:
+      - '.idea/**'
+      - '.run/**'
+      - '.vscode/**'
+      - '.env.dist'
+      - 'docker-compose.yml'
+      - 'README.md'
+
+# This allows a subsequently queued workflow run to interrupt previous runs
+concurrency:
+  group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build & Release
+    runs-on: ubuntu-latest
+    steps:
+      # setup and prepare environment
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: docker/metadata-action@v5
+        id: metadata
+        with:
+          images: |
+            ghcr.io/transnursery/ivybot
+          tags: |
+            type=ref,event=branch
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+          cache: 'gradle'
+
+      # compile the actual binary
+      - run: ./gradlew bootJar --no-daemon
+
+      # publish branch-bases docker image
+      - uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          platforms: linux/amd64,linux/arm64,linux/arm,linux/ppc64le,linux/s390x
+          tags: ${{ steps.metadata.outputs.tags }}
+          labels: ${{ steps.metadata.outputs.labels }}
+
+      # create tag/release for "main" branch
+      - uses: mathieudutour/github-tag-action@v6.1
+        if: github.ref_name == 'main'
+        id: tag_version
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+      - uses: softprops/action-gh-release@v1
+        if: github.ref_name == 'main'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          name: Release ${{ steps.tag_version.outputs.new_tag }}
+          tag_name: ${{ steps.tag_version.outputs.new_tag }}
+          body: ${{ steps.tag_version.outputs.changelog }}
+          files: build/libs/ivybot.jar
