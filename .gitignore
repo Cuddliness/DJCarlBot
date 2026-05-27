@@ -1,49 +1,22 @@
-.gradle
+# Gradle local cache (DO NOT COMMIT)
+.gradle/
 build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
-*.iws
+# IntelliJ IDEA
+.idea/
 *.iml
-*.ipr
-/.junie
-/.gradle
 out/
-!**/src/main/**/out/
-!**/src/test/**/out/
-/.idea
-/gradle
-### Eclipse ###
-.apt_generated
+
+# Eclipse (if ever used)
 .classpath
-.factorypath
 .project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
+.settings/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-### VS Code ###
-.vscode/
-
-### Mac OS ###
+# OS files
 .DS_Store
+Thumbs.db
 
+# Logs
+*.log
+.junie
 .env
-/data
-
