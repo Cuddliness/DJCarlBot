@@ -33,7 +33,7 @@ jobs:
         id: metadata
         with:
           images: |
-            ghcr.io/transnursery/ivybot
+            ghcr.io/cuddliness/DJCarlBot
           tags: |
             type=ref,event=branch
       - uses: actions/setup-java@v4
