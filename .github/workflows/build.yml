@@ -44,7 +44,10 @@ jobs:
 
       # compile the actual binary
       - run: ./gradlew bootJar --no-daemon
-
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
       # publish branch-bases docker image
       - uses: docker/build-push-action@v5
         with:
