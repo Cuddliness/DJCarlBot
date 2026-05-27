@@ -24,12 +24,14 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
 
     implementation("com.squareup.okhttp3:okhttp:5.3.2")
-    implementation("com.google.code.gson:gson:2.10.1")
+    implementation("com.google.code.gson:gson:2.11.0")
     implementation("com.vdurmont:emoji-java:5.1.1")
     implementation("org.apache.commons:commons-text:1.11.0")
     implementation("one.stayfocused.spring:dotenv-spring-boot:1.0.0")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    implementation ("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
+    implementation("com.microsoft.playwright:playwright:1.60.0")
 }
 
 tasks.test {

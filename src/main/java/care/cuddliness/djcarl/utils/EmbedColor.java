@@ -1,7 +1,7 @@
 package care.cuddliness.djcarl.utils;
 
 public enum EmbedColor {
-    PRIMARY("#BEADFA"), SECONDARY("#82A0D8"), WARNING("#fcc44c"), ERROR("#f74040"), SUCCESS("#6df76d");
+    PRIMARY("#8b6f96"), SECONDARY("#82A0D8"), WARNING("#ffbd86"), ERROR("#ff7472"), SUCCESS("#acbcac");
 
     private String color;
 

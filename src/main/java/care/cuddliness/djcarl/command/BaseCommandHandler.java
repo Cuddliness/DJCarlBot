@@ -118,7 +118,9 @@ public class BaseCommandHandler {
             LOGGER.error("Command not found with ID {} and path {}", commandId, commandPath);
             return null;
         }
-        if (subCommandName == null) return command.command();
+        if (subCommandName == null) {
+            return command.command(); // BUT ensure it uses event.getOptions()
+        }
 
         if (subCommandGroup != null) subCommandName = subCommandGroup + "/" + subCommandName;
 

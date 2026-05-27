@@ -29,6 +29,16 @@ public record BaseCommand(@NotNull BaseCommandInterface command, Map<String, Bas
         List<SubcommandGroupData> subCommandGroups = new ArrayList<>();
         SlashCommandData commandData = Commands.slash(name, name);
 
+        this.options.forEach(option ->
+                commandData.addOption(
+                        option.type(),
+                        option.name(),
+                        option.description(),
+                        option.required(),
+                        option.autoComplete()
+                )
+        );
+
         for (BaseSubCommand subCommand : subCommands.values()) {
             if (subCommandGroups.stream().noneMatch(subcommandGroupData -> subcommandGroupData.getName().equalsIgnoreCase(subCommand.SubCommandGroup()))) {
                 if (!subCommand.SubCommandGroup().equalsIgnoreCase("")) {
