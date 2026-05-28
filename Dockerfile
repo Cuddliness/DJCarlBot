@@ -11,5 +11,6 @@ FROM eclipse-temurin:17-jre
 WORKDIR /app
 
 COPY --from=build /src/build/libs/*.jar app.jar
+COPY metal-quotes.json /app/metal-quotes.json
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
