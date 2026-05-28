@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.*;
@@ -117,9 +118,14 @@ public class GraspopScheduleService {
     // LIVE QUERIES
     // ---------------------------
 
-    public List<GraspopPerformance> nowPlaying(LocalTime now) {
+    public List<GraspopPerformance> nowPlaying(LocalDateTime now) {
+        LocalDate date = now.toLocalDate();
+        LocalTime time = now.toLocalTime();
+
         return performances.stream()
-                .filter(p -> p.isPlaying(now))
+                .filter(p -> !date.isBefore(LocalDate.of(2025, 6, 18))
+                        && !date.isAfter(LocalDate.of(2025, 6, 21))
+                        && p.isPlaying(time))
                 .toList();
     }
 

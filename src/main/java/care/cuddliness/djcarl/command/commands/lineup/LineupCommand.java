@@ -59,7 +59,6 @@ public class LineupCommand  implements BaseCommandInterface, AutoCompletableInte
                     .map(word -> new Command.Choice(word, word))
                     .collect(Collectors.toList());
             event.replyChoices(options).queue();
-
         }
 
         String[] stages = new String[]{"South Stage", "North Stage", "Marquee", "Jupiler Stage", "Metal Dome", "Classic Rock Café"};
