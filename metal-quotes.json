@@ -1,0 +1,494 @@
+{
+  "metalQuotes": [
+    {
+      "id": 1,
+      "quote": "Of all the things I've lost, I miss my mind the most.",
+      "author": "Ozzy Osbourne",
+      "band": "Black Sabbath",
+      "tags": ["humor", "life", "mind"]
+    },
+    {
+      "id": 2,
+      "quote": "As long as there are kids who are pissed off and have no real way in venting out that anger, heavy metal will live on.",
+      "author": "Ozzy Osbourne",
+      "band": "Black Sabbath",
+      "tags": ["heavy metal", "anger", "youth"]
+    },
+    {
+      "id": 3,
+      "quote": "You've got to believe in yourself, or no one will believe in you.",
+      "author": "Ozzy Osbourne",
+      "band": "Black Sabbath",
+      "tags": ["inspiration", "self-belief"]
+    },
+    {
+      "id": 4,
+      "quote": "I'm a lunatic by nature, and lunatics don't need training – they just are.",
+      "author": "Ozzy Osbourne",
+      "band": "Black Sabbath",
+      "tags": ["humor", "nature", "personality"]
+    },
+    {
+      "id": 5,
+      "quote": "You can't kill Rock 'n' Roll. It's here to stay.",
+      "author": "Ozzy Osbourne",
+      "band": "Black Sabbath",
+      "tags": ["rock", "immortal", "music"]
+    },
+    {
+      "id": 6,
+      "quote": "Maybe it's not too late to learn how to love and forget how to hate.",
+      "author": "Ozzy Osbourne",
+      "band": "Black Sabbath",
+      "tags": ["love", "hate", "wisdom"]
+    },
+    {
+      "id": 7,
+      "quote": "I got rabies shots for biting the head off a bat, but that's OK — the bat had to get Ozzy shots.",
+      "author": "Ozzy Osbourne",
+      "band": "Black Sabbath",
+      "tags": ["humor", "iconic", "bat"]
+    },
+    {
+      "id": 8,
+      "quote": "Heavy metal is immortal, but we're not.",
+      "author": "Rob Halford",
+      "band": "Judas Priest",
+      "tags": ["heavy metal", "mortality", "immortal"]
+    },
+    {
+      "id": 9,
+      "quote": "Metal is the voice of the outcasts and the misunderstood.",
+      "author": "Rob Halford",
+      "band": "Judas Priest",
+      "tags": ["identity", "outsiders", "belonging"]
+    },
+    {
+      "id": 10,
+      "quote": "The brotherhood of metal knows no boundaries.",
+      "author": "Rob Halford",
+      "band": "Judas Priest",
+      "tags": ["community", "brotherhood", "unity"]
+    },
+    {
+      "id": 11,
+      "quote": "Without passion, there's no real art.",
+      "author": "Rob Halford",
+      "band": "Judas Priest",
+      "tags": ["passion", "art", "music"]
+    },
+    {
+      "id": 12,
+      "quote": "There are basically two categories of music: Metal and bullshit.",
+      "author": "Bruce Dickinson",
+      "band": "Iron Maiden",
+      "tags": ["humor", "metal", "opinion"]
+    },
+    {
+      "id": 13,
+      "quote": "Rebellion is the essence of metal; it's about breaking free.",
+      "author": "Bruce Dickinson",
+      "band": "Iron Maiden",
+      "tags": ["rebellion", "freedom", "metal"]
+    },
+    {
+      "id": 14,
+      "quote": "Only the good die young.",
+      "author": "Bruce Dickinson",
+      "band": "Iron Maiden",
+      "tags": ["life", "mortality", "wisdom"]
+    },
+    {
+      "id": 15,
+      "quote": "Metal is not just music; it's a way of life.",
+      "author": "James Hetfield",
+      "band": "Metallica",
+      "tags": ["lifestyle", "metal", "dedication"]
+    },
+    {
+      "id": 16,
+      "quote": "We stand together, united by our love for metal.",
+      "author": "James Hetfield",
+      "band": "Metallica",
+      "tags": ["unity", "love", "community"]
+    },
+    {
+      "id": 17,
+      "quote": "Dedication to your craft is the only way to succeed.",
+      "author": "James Hetfield",
+      "band": "Metallica",
+      "tags": ["dedication", "craft", "success"]
+    },
+    {
+      "id": 18,
+      "quote": "Stand your ground and fight for what you believe in.",
+      "author": "Dave Mustaine",
+      "band": "Megadeth",
+      "tags": ["courage", "conviction", "fight"]
+    },
+    {
+      "id": 19,
+      "quote": "If I was going to listen to anybody, I'd listen to me.",
+      "author": "Lemmy Kilmister",
+      "band": "Motörhead",
+      "tags": ["humor", "self-reliance", "attitude"]
+    },
+    {
+      "id": 20,
+      "quote": "The power of metal lies in its ability to unite and empower.",
+      "author": "Lemmy Kilmister",
+      "band": "Motörhead",
+      "tags": ["power", "unity", "empowerment"]
+    },
+    {
+      "id": 21,
+      "quote": "What are my hobbies? Helping old ladies into the middle of the road.",
+      "author": "Lemmy Kilmister",
+      "band": "Motörhead",
+      "tags": ["humor", "dark humor", "personality"]
+    },
+    {
+      "id": 22,
+      "quote": "It is just that heavy metal musicians write in minor keys, and when you do that, you frighten people.",
+      "author": "Ronnie James Dio",
+      "band": "Dio / Black Sabbath / Rainbow",
+      "tags": ["music theory", "minor keys", "darkness"]
+    },
+    {
+      "id": 23,
+      "quote": "Through the chaos of metal, we find clarity.",
+      "author": "Corey Taylor",
+      "band": "Slipknot",
+      "tags": ["chaos", "clarity", "metal"]
+    },
+    {
+      "id": 24,
+      "quote": "In metal, we embrace our darkness and turn it into strength.",
+      "author": "Dimebag Darrell",
+      "band": "Pantera",
+      "tags": ["darkness", "strength", "metal"]
+    },
+    {
+      "id": 25,
+      "quote": "Metal teaches us to face our fears and rise above them.",
+      "author": "Chuck Schuldiner",
+      "band": "Death",
+      "tags": ["fear", "strength", "resilience"]
+    },
+    {
+      "id": 26,
+      "quote": "The chaos of metal is a beautiful expression of art.",
+      "author": "Tom Araya",
+      "band": "Slayer",
+      "tags": ["chaos", "art", "beauty"]
+    },
+    {
+      "id": 27,
+      "quote": "In the end, metal is about passion — pure, undiluted passion.",
+      "author": "Mikael Åkerfeldt",
+      "band": "Opeth",
+      "tags": ["passion", "purity", "emotion"]
+    },
+    {
+      "id": 28,
+      "quote": "Metal is the voice of the misfits and the outcasts.",
+      "author": "Mikael Åkerfeldt",
+      "band": "Opeth",
+      "tags": ["identity", "outcasts", "belonging"]
+    },
+    {
+      "id": 29,
+      "quote": "Every riff, every lyric is an act of defiance.",
+      "author": "King Diamond",
+      "band": "King Diamond / Mercyful Fate",
+      "tags": ["defiance", "riff", "art"]
+    },
+    {
+      "id": 30,
+      "quote": "Metal frees the mind and liberates the soul.",
+      "author": "Kerry King",
+      "band": "Slayer",
+      "tags": ["freedom", "soul", "liberation"]
+    },
+    {
+      "id": 31,
+      "quote": "In metal, we find the courage to be ourselves.",
+      "author": "Angela Gossow",
+      "band": "Arch Enemy",
+      "tags": ["courage", "identity", "authenticity"]
+    },
+    {
+      "id": 32,
+      "quote": "Break the chains and unleash your spirit.",
+      "author": "Joey Jordison",
+      "band": "Slipknot",
+      "tags": ["freedom", "spirit", "liberation"]
+    },
+    {
+      "id": 33,
+      "quote": "In metal, we are all brothers and sisters.",
+      "author": "Phil Anselmo",
+      "band": "Pantera",
+      "tags": ["community", "brotherhood", "unity"]
+    },
+    {
+      "id": 34,
+      "quote": "Pantera revolutionized the sound and the approach to heavy metal.",
+      "author": "Phil Anselmo",
+      "band": "Pantera",
+      "tags": ["innovation", "groove metal", "revolution"]
+    },
+    {
+      "id": 35,
+      "quote": "Heavy metal is a universal energy — it's the sound of a volcano.",
+      "author": "Billy Corgan",
+      "band": "Smashing Pumpkins",
+      "tags": ["energy", "power", "nature"]
+    },
+    {
+      "id": 36,
+      "quote": "People say Cream gave birth to heavy metal. If that's so, we should have had an abortion.",
+      "author": "Ginger Baker",
+      "band": "Cream",
+      "tags": ["humor", "origins", "dark humor"]
+    },
+    {
+      "id": 37,
+      "quote": "Heavy Metal is the most conservative of all loud music. Let's face it, not even a gym teacher could get as many people to dress alike.",
+      "author": "Jello Biafra",
+      "band": "Dead Kennedys",
+      "tags": ["humor", "fashion", "culture"]
+    },
+    {
+      "id": 38,
+      "quote": "Metal music is like alcohol: the more you consume it, the heavier you can tolerate it.",
+      "author": "Criss Jami",
+      "band": null,
+      "tags": ["music", "humor", "philosophy"]
+    },
+    {
+      "id": 39,
+      "quote": "Heavy metal has never ever been given the respect and credit it deserves. And in some ways, it's probably what makes it so near and dear to the people who love it.",
+      "author": "Unknown",
+      "band": null,
+      "tags": ["respect", "passion", "community"]
+    },
+    {
+      "id": 40,
+      "quote": "Hard rock for me is AC/DC, Def Leppard, Tesla, Kiss. Metal tends to be louder, ruder, darker, like Judas Priest, Slayer, Iron Maiden.",
+      "author": "Eddie Trunk",
+      "band": null,
+      "tags": ["genre", "hard rock", "comparison"]
+    },
+    {
+      "id": 41,
+      "quote": "The true spirit of metal is not about the sound, but the connection it creates.",
+      "author": "Ozzy Osbourne",
+      "band": "Black Sabbath",
+      "tags": ["community", "spirit", "connection"]
+    },
+    {
+      "id": 42,
+      "quote": "Black Sabbath invented heavy metal, in my opinion.",
+      "author": "Rob Halford",
+      "band": "Judas Priest",
+      "tags": ["history", "origins", "Black Sabbath"]
+    },
+    {
+      "id": 43,
+      "quote": "All I've got on my iPod is every single Queen song and every single Judas Priest song. Queen were an incredible heavy metal band.",
+      "author": "Rob Halford",
+      "band": "Judas Priest",
+      "tags": ["Queen", "Judas Priest", "influence"]
+    },
+    {
+      "id": 44,
+      "quote": "Rock and metal are like a primal scream, a release for the soul.",
+      "author": "Brent Hinds",
+      "band": "Mastodon",
+      "tags": ["emotion", "release", "primal"]
+    },
+    {
+      "id": 45,
+      "quote": "Don't let anyone dictate who you should be.",
+      "author": "Chad Gray",
+      "band": "Mudvayne",
+      "tags": ["identity", "freedom", "individuality"]
+    },
+    {
+      "id": 46,
+      "quote": "The day that this group becomes a machine is the day it's over.",
+      "author": "Gene Simmons",
+      "band": "KISS",
+      "tags": ["authenticity", "band", "integrity"]
+    },
+    {
+      "id": 47,
+      "quote": "Gene lives about five minutes from me – I can see his ego from my house!",
+      "author": "Paul Stanley",
+      "band": "KISS",
+      "tags": ["humor", "ego", "Gene Simmons"]
+    },
+    {
+      "id": 48,
+      "quote": "Pop music, disco music, and heavy metal music is about shutting out the tensions of life, putting it away.",
+      "author": "Unknown",
+      "band": null,
+      "tags": ["escape", "tension", "life"]
+    },
+    {
+      "id": 49,
+      "quote": "From the beginning, I felt that Heavy Metal is not just about music but also something that you feel with your heart.",
+      "author": "Unknown",
+      "band": null,
+      "tags": ["emotion", "heart", "metal"]
+    },
+    {
+      "id": 50,
+      "quote": "Heavy metal is always going to be there. At its core, it's about passion and power.",
+      "author": "Unknown",
+      "band": null,
+      "tags": ["passion", "power", "endurance"]
+    },
+    {
+      "id": 51,
+      "quote": "A kid once said to me, do you get hangovers? I said, to get hangovers you have to stop drinking.",
+      "author": "Lemmy Kilmister",
+      "band": "Motörhead",
+      "tags": ["humor", "drinking", "Lemmy"]
+    },
+    {
+      "id": 52,
+      "quote": "I don't want you to play me a riff that's going to impress Joe Satriani; give me a riff that makes a kid want to go out and buy a guitar and learn to play.",
+      "author": "Ozzy Osbourne",
+      "band": "Black Sabbath",
+      "tags": ["guitar", "inspiration", "simplicity"]
+    },
+    {
+      "id": 53,
+      "quote": "The road to nowhere leads to me.",
+      "author": "Ozzy Osbourne",
+      "band": "Black Sabbath",
+      "tags": ["existential", "humor", "life"]
+    },
+    {
+      "id": 54,
+      "quote": "I write almost all my songs on an acoustic guitar, even if they turn into heavy metal songs.",
+      "author": "Unknown",
+      "band": null,
+      "tags": ["songwriting", "acoustic", "process"]
+    },
+    {
+      "id": 55,
+      "quote": "We're better than Metallica. We're better musicians, better players.",
+      "author": "Steve Harris",
+      "band": "Iron Maiden",
+      "tags": ["rivalry", "confidence", "Metallica"]
+    },
+    {
+      "id": 56,
+      "quote": "Since the 1960s, mainstream media has searched out and co-opted the most authentic things it could find in youth culture. Eventually heavy metal culture — they'll look for it and then market it back to kids at the mall.",
+      "author": "Unknown",
+      "band": null,
+      "tags": ["mainstream", "culture", "commercialism"]
+    },
+    {
+      "id": 57,
+      "quote": "This band is metal in that we have a lot of metal in our instruments, and there's quite a lot of metal on my belt buckle as well.",
+      "author": "Mikey Way",
+      "band": "My Chemical Romance",
+      "tags": ["humor", "genre", "meta"]
+    },
+    {
+      "id": 58,
+      "quote": "At the time of starting this band I was listening to tons of death metal. The bands that made me want to be in a band were groups like Korn, Deftones, Slayer, Sepultura.",
+      "author": "Unknown",
+      "band": null,
+      "tags": ["influence", "death metal", "inspiration"]
+    },
+    {
+      "id": 59,
+      "quote": "A lot of them are heavy metal fans and go to war areas and listen to their metal. I'm glad that my music has somehow helped them get through that at least a little bit.",
+      "author": "Max Cavalera",
+      "band": "Sepultura / Soulfly",
+      "tags": ["connection", "fans", "purpose"]
+    },
+    {
+      "id": 60,
+      "quote": "Deep Purple definitely belongs in the Rock and Roll Hall of Fame. They had great songs, great musicianship, they had an impact, and they're a huge influence on the heavy metal community.",
+      "author": "Kirk Hammett",
+      "band": "Metallica",
+      "tags": ["Deep Purple", "respect", "influence"]
+    },
+    {
+      "id": 61,
+      "quote": "I don't think there's any music that you hear on the radio today that would be possible without Jimi Hendrix. Rock, blues-rock, heavy metal — Jimi did it. He invented the blues-rock genre for guitar players.",
+      "author": "Unknown",
+      "band": null,
+      "tags": ["Jimi Hendrix", "influence", "history"]
+    },
+    {
+      "id": 62,
+      "quote": "I kept hearing that metal is dead and Ozzy's dead and people that like Ozzy are dead. I have never had an empty seat.",
+      "author": "Ozzy Osbourne",
+      "band": "Black Sabbath",
+      "tags": ["defiance", "longevity", "fans"]
+    },
+    {
+      "id": 63,
+      "quote": "I'm not in the band anymore because of musical differences. They were musical. I was different.",
+      "author": "Ozzy Osbourne",
+      "band": "Black Sabbath",
+      "tags": ["humor", "band drama", "self-deprecating"]
+    },
+    {
+      "id": 64,
+      "quote": "The thing about life that gets me crazy is that by the time you learn it all, it's too late to deal with it.",
+      "author": "Ozzy Osbourne",
+      "band": "Black Sabbath",
+      "tags": ["life", "wisdom", "philosophy"]
+    },
+    {
+      "id": 65,
+      "quote": "Metal: it's not a genre, it's a community.",
+      "author": "Unknown",
+      "band": null,
+      "tags": ["community", "identity", "metal"]
+    },
+    {
+      "id": 66,
+      "quote": "You learn who your friends are when the shit hits the fan.",
+      "author": "Ozzy Osbourne",
+      "band": "Black Sabbath",
+      "tags": ["friendship", "adversity", "loyalty"]
+    },
+    {
+      "id": 67,
+      "quote": "I love you all; I love you more than life itself, but you're all fucking mad.",
+      "author": "Ozzy Osbourne",
+      "band": "Black Sabbath",
+      "tags": ["humor", "love", "fans"]
+    },
+    {
+      "id": 68,
+      "quote": "Never judge a book by its cover. I don't even know who Ozzy is. I wake up a new person every day.",
+      "author": "Ozzy Osbourne",
+      "band": "Black Sabbath",
+      "tags": ["identity", "self-discovery", "humor"]
+    },
+    {
+      "id": 69,
+      "quote": "Hating people isn't a productive way of living. So what's the point in hating anyone? There's enough hate in the world as it is.",
+      "author": "Ozzy Osbourne",
+      "band": "Black Sabbath",
+      "tags": ["love", "hate", "wisdom"]
+    },
+    {
+      "id": 70,
+      "quote": "I can't change the past, but I can try to make a better future for me.",
+      "author": "Ozzy Osbourne",
+      "band": "Black Sabbath",
+      "tags": ["future", "change", "hope"]
+    }
+  ]
+}
