@@ -6,20 +6,28 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import jakarta.annotation.PostConstruct;
+import org.jsoup.nodes.Element;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 @Service
 public class GraspopScheduleService {
 
-
+    private static final Logger log = LoggerFactory.getLogger(GraspopLineupScraper.class);
     private final ObjectMapper objectMapper;
     private final List<GraspopPerformance> performances = new ArrayList<>();
-
+    private static final Pattern ACT_PATTERN =
+            Pattern.compile("^(.+?)\\s+(\\d{1,2}\\.\\d{2})\\s*-\\s*(\\d{1,2}\\.\\d{2})$");
     public GraspopScheduleService(ObjectMapper objectMapper) {
         this.objectMapper = objectMapper;
     }
@@ -29,9 +37,8 @@ public class GraspopScheduleService {
     // ---------------------------
     @PostConstruct
     public void loadSchedule() {
-        try (InputStream is = getClass()
-                .getClassLoader()
-                .getResourceAsStream("lineup.json")) {
+        try (InputStream is = Files.newInputStream(
+                Paths.get("graspop.json"))) {
 
             if (is == null) {
                 throw new RuntimeException("graspop-schedule.json not found");

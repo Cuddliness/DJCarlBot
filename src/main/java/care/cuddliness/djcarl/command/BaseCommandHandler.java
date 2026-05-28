@@ -111,7 +111,6 @@ public class BaseCommandHandler {
     }
 
     private @Nullable BaseCommandExecutorInterface determineExecutor(long commandId, @Nullable String subCommandName, @Nullable String subCommandGroup) {
-        System.out.println("Command Id: " + commandId + " Subcommand: " + subCommandName + " Group: " + subCommandGroup);
         String commandPath = subCommandGroup == null ? subCommandName : subCommandGroup + "/" + subCommandName;
         BaseCommand command = this.commandsById.get(commandId);
         if (command == null) {

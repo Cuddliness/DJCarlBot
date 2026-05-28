@@ -33,7 +33,7 @@ dependencies {
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     implementation ("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
-    implementation("com.microsoft.playwright:playwright:1.60.0")
+    implementation("org.jsoup:jsoup:1.22.2")
 }
 
 tasks.test {

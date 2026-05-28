@@ -1,0 +1,718 @@
+{
+  "Thursday" : {
+    "South Stage" : [ {
+      "artist" : "Ego Kill Talent",
+      "start" : "12:45",
+      "end" : "13:30"
+    }, {
+      "artist" : "Danko Jones",
+      "start" : "14:35",
+      "end" : "15:25"
+    }, {
+      "artist" : "Accept",
+      "start" : "16:35",
+      "end" : "17:25"
+    }, {
+      "artist" : "A Day to Remember",
+      "start" : "18:40",
+      "end" : "19:35"
+    }, {
+      "artist" : "Within Temptation",
+      "start" : "21:10",
+      "end" : "22:25"
+    }, {
+      "artist" : "The Offspring",
+      "start" : "00:00",
+      "end" : "01:30"
+    } ],
+    "North Stage" : [ {
+      "artist" : "Mantah",
+      "start" : "12:00",
+      "end" : "12:40"
+    }, {
+      "artist" : "Static-X",
+      "start" : "13:35",
+      "end" : "14:25"
+    }, {
+      "artist" : "Wind Rose",
+      "start" : "15:35",
+      "end" : "16:25"
+    }, {
+      "artist" : "Tom Morello",
+      "start" : "17:35",
+      "end" : "18:30"
+    }, {
+      "artist" : "Megadeth",
+      "start" : "19:45",
+      "end" : "21:00"
+    }, {
+      "artist" : "Limp Bizkit",
+      "start" : "22:35",
+      "end" : "23:50"
+    } ],
+    "Marquee" : [ {
+      "artist" : "Distant",
+      "start" : "12:00",
+      "end" : "12:40"
+    }, {
+      "artist" : "Snot",
+      "start" : "13:15",
+      "end" : "14:00"
+    }, {
+      "artist" : "Dying Wish",
+      "start" : "14:40",
+      "end" : "15:25"
+    }, {
+      "artist" : "Gatecreeper",
+      "start" : "16:05",
+      "end" : "16:55"
+    }, {
+      "artist" : "Wolves In The Throne Room",
+      "start" : "17:35",
+      "end" : "18:25"
+    }, {
+      "artist" : "Septicflesh",
+      "start" : "19:10",
+      "end" : "20:00"
+    }, {
+      "artist" : "Cult of Luna",
+      "start" : "20:45",
+      "end" : "21:40"
+    }, {
+      "artist" : "Anthrax",
+      "start" : "22:25",
+      "end" : "23:25"
+    } ],
+    "Jupiler Stage" : [ {
+      "artist" : "Slay Squad",
+      "start" : "12:40",
+      "end" : "13:20"
+    }, {
+      "artist" : "BLACKGOLD",
+      "start" : "14:00",
+      "end" : "14:45"
+    }, {
+      "artist" : "Thrown",
+      "start" : "15:40",
+      "end" : "16:25"
+    }, {
+      "artist" : "Grade 2",
+      "start" : "17:25",
+      "end" : "18:10"
+    }, {
+      "artist" : "John Coffey",
+      "start" : "19:10",
+      "end" : "20:00"
+    }, {
+      "artist" : "Pennywise",
+      "start" : "21:00",
+      "end" : "21:50"
+    }, {
+      "artist" : "The Dillinger Escape Plan",
+      "start" : "23:00",
+      "end" : "00:00"
+    } ],
+    "Metal Dome" : [ {
+      "artist" : "Magnolia Park",
+      "start" : "12:00",
+      "end" : "12:40"
+    }, {
+      "artist" : "Ankor",
+      "start" : "13:20",
+      "end" : "14:00"
+    }, {
+      "artist" : "The Funeral Portrait",
+      "start" : "14:50",
+      "end" : "15:35"
+    }, {
+      "artist" : "Sleep Theory",
+      "start" : "16:30",
+      "end" : "17:20"
+    }, {
+      "artist" : "Lakeview",
+      "start" : "18:15",
+      "end" : "19:05"
+    }, {
+      "artist" : "Bloodywood",
+      "start" : "20:05",
+      "end" : "20:55"
+    }, {
+      "artist" : "President",
+      "start" : "21:55",
+      "end" : "22:55"
+    }, {
+      "artist" : "DJ Nathachelet",
+      "start" : "00:00",
+      "end" : "00:50"
+    }, {
+      "artist" : "NIN UK",
+      "start" : "00:50",
+      "end" : "01:20"
+    }, {
+      "artist" : "DJ Nathachelet",
+      "start" : "01:20",
+      "end" : "01:40"
+    }, {
+      "artist" : "Deaftones",
+      "start" : "01:40",
+      "end" : "02:10"
+    }, {
+      "artist" : "DJ Nathachelet",
+      "start" : "02:10",
+      "end" : "02:30"
+    }, {
+      "artist" : "Spouky Kids",
+      "start" : "02:30",
+      "end" : "03:00"
+    }, {
+      "artist" : "DJ Nathachelet",
+      "start" : "03:00",
+      "end" : "03:20"
+    }, {
+      "artist" : "Korn Again",
+      "start" : "03:20",
+      "end" : "03:50"
+    } ],
+    "Classic Rock Café" : [ {
+      "artist" : "Thrash Attack",
+      "start" : "14:00",
+      "end" : "14:45"
+    }, {
+      "artist" : "Powerslave",
+      "start" : "15:15",
+      "end" : "16:30"
+    }, {
+      "artist" : "Thrash Attack",
+      "start" : "17:00",
+      "end" : "17:45"
+    }, {
+      "artist" : "DJ Carl",
+      "start" : "00:00",
+      "end" : "04:00"
+    } ]
+  },
+  "Friday" : {
+    "South Stage" : [ {
+      "artist" : "Quicksand",
+      "start" : "12:55",
+      "end" : "13:40"
+    }, {
+      "artist" : "Triggerfinger",
+      "start" : "14:45",
+      "end" : "15:35"
+    }, {
+      "artist" : "Cavalera \"Chaos A.D.\"",
+      "start" : "16:45",
+      "end" : "17:35"
+    }, {
+      "artist" : "Sex Pistols featuring Frank Carter",
+      "start" : "18:45",
+      "end" : "19:45"
+    }, {
+      "artist" : "Alter Bridge",
+      "start" : "21:10",
+      "end" : "22:25"
+    }, {
+      "artist" : "Volbeat",
+      "start" : "00:00",
+      "end" : "01:30"
+    } ],
+    "North Stage" : [ {
+      "artist" : "Infected Rain",
+      "start" : "12:00",
+      "end" : "12:45"
+    }, {
+      "artist" : "Drowning Pool",
+      "start" : "13:50",
+      "end" : "14:35"
+    }, {
+      "artist" : "Mammoth",
+      "start" : "15:45",
+      "end" : "16:35"
+    }, {
+      "artist" : "Trivium",
+      "start" : "17:45",
+      "end" : "18:35"
+    }, {
+      "artist" : "Breaking Benjamin",
+      "start" : "19:55",
+      "end" : "21:00"
+    }, {
+      "artist" : "Knocked Loose",
+      "start" : "22:35",
+      "end" : "23:50"
+    } ],
+    "Marquee" : [ {
+      "artist" : "Hulder",
+      "start" : "12:00",
+      "end" : "12:40"
+    }, {
+      "artist" : "Bark",
+      "start" : "13:20",
+      "end" : "14:05"
+    }, {
+      "artist" : "Asomvel",
+      "start" : "14:45",
+      "end" : "15:30"
+    }, {
+      "artist" : "Suicidal Angels",
+      "start" : "16:10",
+      "end" : "17:00"
+    }, {
+      "artist" : "Old Man's Child",
+      "start" : "17:40",
+      "end" : "18:30"
+    }, {
+      "artist" : "Possessed",
+      "start" : "19:10",
+      "end" : "20:00"
+    }, {
+      "artist" : "Death To All",
+      "start" : "20:45",
+      "end" : "21:45"
+    }, {
+      "artist" : "Cradle Of Filth",
+      "start" : "22:45",
+      "end" : "00:00"
+    } ],
+    "Jupiler Stage" : [ {
+      "artist" : "Thornhill",
+      "start" : "12:40",
+      "end" : "13:20"
+    }, {
+      "artist" : "letlive.",
+      "start" : "14:05",
+      "end" : "14:45"
+    }, {
+      "artist" : "Guilt Trip",
+      "start" : "15:40",
+      "end" : "16:25"
+    }, {
+      "artist" : "Drain",
+      "start" : "17:25",
+      "end" : "18:10"
+    }, {
+      "artist" : "We Came As Romans",
+      "start" : "19:10",
+      "end" : "20:00"
+    }, {
+      "artist" : "Kublai Khan TX",
+      "start" : "21:00",
+      "end" : "21:50"
+    }, {
+      "artist" : "Lionheart",
+      "start" : "23:30",
+      "end" : "00:30"
+    } ],
+    "Metal Dome" : [ {
+      "artist" : "Vower",
+      "start" : "12:00",
+      "end" : "12:40"
+    }, {
+      "artist" : "TX2",
+      "start" : "13:20",
+      "end" : "14:05"
+    }, {
+      "artist" : "Oranssi Pazuzu",
+      "start" : "14:50",
+      "end" : "15:35"
+    }, {
+      "artist" : "Harakiri for the Sky",
+      "start" : "16:30",
+      "end" : "17:20"
+    }, {
+      "artist" : "Elder",
+      "start" : "18:15",
+      "end" : "19:05"
+    }, {
+      "artist" : "Kadavar",
+      "start" : "20:05",
+      "end" : "20:55"
+    }, {
+      "artist" : "Leprous",
+      "start" : "21:55",
+      "end" : "22:55"
+    }, {
+      "artist" : "DJ Nathachelet",
+      "start" : "00:30",
+      "end" : "01:30"
+    }, {
+      "artist" : "St. Jimmy's",
+      "start" : "01:30",
+      "end" : "02:30"
+    }, {
+      "artist" : "DJ Nathachelet",
+      "start" : "02:30",
+      "end" : "02:50"
+    }, {
+      "artist" : "Pablo Honey",
+      "start" : "02:50",
+      "end" : "03:50"
+    } ],
+    "Classic Rock Café" : [ {
+      "artist" : "AmÆzing Snäke",
+      "start" : "14:00",
+      "end" : "14:45"
+    }, {
+      "artist" : "AmÆzing Snäke",
+      "start" : "15:15",
+      "end" : "16:00"
+    }, {
+      "artist" : "AmÆzing Snäke",
+      "start" : "16:30",
+      "end" : "17:15"
+    }, {
+      "artist" : "ROLR",
+      "start" : "19:00",
+      "end" : "19:45"
+    }, {
+      "artist" : "ROLR",
+      "start" : "20:15",
+      "end" : "21:00"
+    }, {
+      "artist" : "ROLR",
+      "start" : "21:30",
+      "end" : "22:15"
+    }, {
+      "artist" : "DJ Carl",
+      "start" : "00:00",
+      "end" : "04:00"
+    } ]
+  },
+  "Saturday" : {
+    "South Stage" : [ {
+      "artist" : "Fleddy Melculy",
+      "start" : "12:55",
+      "end" : "13:40"
+    }, {
+      "artist" : "Malevolence",
+      "start" : "14:45",
+      "end" : "15:35"
+    }, {
+      "artist" : "Hollywood Undead",
+      "start" : "16:45",
+      "end" : "17:35"
+    }, {
+      "artist" : "Ice Nine Kills",
+      "start" : "18:50",
+      "end" : "19:50"
+    }, {
+      "artist" : "Architects",
+      "start" : "21:10",
+      "end" : "22:25"
+    }, {
+      "artist" : "Bring Me The Horizon",
+      "start" : "00:00",
+      "end" : "01:30"
+    } ],
+    "North Stage" : [ {
+      "artist" : "The Pretty Wild",
+      "start" : "12:00",
+      "end" : "12:45"
+    }, {
+      "artist" : "P.O.D.",
+      "start" : "13:50",
+      "end" : "14:35"
+    }, {
+      "artist" : "Sepultura",
+      "start" : "15:45",
+      "end" : "16:35"
+    }, {
+      "artist" : "Three Days Grace",
+      "start" : "17:45",
+      "end" : "18:40"
+    }, {
+      "artist" : "BABYMETAL",
+      "start" : "20:00",
+      "end" : "21:00"
+    }, {
+      "artist" : "Bad Omens",
+      "start" : "22:35",
+      "end" : "23:50"
+    } ],
+    "Marquee" : [ {
+      "artist" : "Embryonic Autopsy",
+      "start" : "12:15",
+      "end" : "13:00"
+    }, {
+      "artist" : "Sinsaenum",
+      "start" : "13:40",
+      "end" : "14:25"
+    }, {
+      "artist" : "Uada",
+      "start" : "15:05",
+      "end" : "15:50"
+    }, {
+      "artist" : "Terrorizer",
+      "start" : "16:30",
+      "end" : "17:15"
+    }, {
+      "artist" : "Lacuna Coil",
+      "start" : "17:55",
+      "end" : "18:45"
+    }, {
+      "artist" : "Corrosion Of Conformity",
+      "start" : "19:25",
+      "end" : "20:15"
+    }, {
+      "artist" : "Moonspell",
+      "start" : "20:55",
+      "end" : "21:45"
+    }, {
+      "artist" : "Six Feet Under",
+      "start" : "22:35",
+      "end" : "23:35"
+    } ],
+    "Jupiler Stage" : [ {
+      "artist" : "Vicious Rumors",
+      "start" : "12:40",
+      "end" : "13:20"
+    }, {
+      "artist" : "Feuerschwanz",
+      "start" : "14:00",
+      "end" : "14:45"
+    }, {
+      "artist" : "Primal Fear",
+      "start" : "15:40",
+      "end" : "16:25"
+    }, {
+      "artist" : "Orden Ogan",
+      "start" : "17:25",
+      "end" : "18:10"
+    }, {
+      "artist" : "Sonata Arctica",
+      "start" : "19:10",
+      "end" : "20:00"
+    }, {
+      "artist" : "Queensrÿche",
+      "start" : "21:00",
+      "end" : "21:50"
+    }, {
+      "artist" : "Avatar",
+      "start" : "23:00",
+      "end" : "00:00"
+    } ],
+    "Metal Dome" : [ {
+      "artist" : "Mouth Culture",
+      "start" : "12:00",
+      "end" : "12:40"
+    }, {
+      "artist" : "Faetooth",
+      "start" : "13:20",
+      "end" : "14:00"
+    }, {
+      "artist" : "Rivers of Nihil",
+      "start" : "14:50",
+      "end" : "15:35"
+    }, {
+      "artist" : "Loathe",
+      "start" : "16:30",
+      "end" : "17:20"
+    }, {
+      "artist" : "Catch Your Breath",
+      "start" : "18:15",
+      "end" : "19:05"
+    }, {
+      "artist" : "Uncle Acid & the Deadbeats",
+      "start" : "20:05",
+      "end" : "20:55"
+    }, {
+      "artist" : "Tesseract",
+      "start" : "21:55",
+      "end" : "22:55"
+    }, {
+      "artist" : "DJ Nathachelet",
+      "start" : "00:30",
+      "end" : "01:30"
+    }, {
+      "artist" : "Slip-NOT",
+      "start" : "01:30",
+      "end" : "02:30"
+    }, {
+      "artist" : "DJ Nathachelet",
+      "start" : "02:30",
+      "end" : "02:50"
+    }, {
+      "artist" : "Chop Suey",
+      "start" : "02:50",
+      "end" : "03:50"
+    } ],
+    "Classic Rock Café" : [ {
+      "artist" : "Ultimate Ozzy",
+      "start" : "14:00",
+      "end" : "15:00"
+    }, {
+      "artist" : "Snaggletooth",
+      "start" : "16:00",
+      "end" : "17:00"
+    }, {
+      "artist" : "DJ Carl",
+      "start" : "00:00",
+      "end" : "04:00"
+    } ]
+  },
+  "Sunday" : {
+    "South Stage" : [ {
+      "artist" : "Battle Beast",
+      "start" : "12:00",
+      "end" : "12:45"
+    }, {
+      "artist" : "Life of Agony",
+      "start" : "13:55",
+      "end" : "14:45"
+    }, {
+      "artist" : "Extreme",
+      "start" : "15:55",
+      "end" : "16:55"
+    }, {
+      "artist" : "Black Label Society",
+      "start" : "18:15",
+      "end" : "19:15"
+    }, {
+      "artist" : "Electric Callboy",
+      "start" : "20:45",
+      "end" : "21:55"
+    }, {
+      "artist" : "Sabaton",
+      "start" : "23:30",
+      "end" : "01:00"
+    } ],
+    "North Stage" : [ {
+      "artist" : "Evergrey",
+      "start" : "12:55",
+      "end" : "13:45"
+    }, {
+      "artist" : "Europe",
+      "start" : "14:55",
+      "end" : "15:45"
+    }, {
+      "artist" : "Foreigner",
+      "start" : "17:05",
+      "end" : "18:05"
+    }, {
+      "artist" : "Alice Cooper",
+      "start" : "19:25",
+      "end" : "20:35"
+    }, {
+      "artist" : "Def Leppard",
+      "start" : "22:05",
+      "end" : "23:20"
+    } ],
+    "Marquee" : [ {
+      "artist" : "Killus",
+      "start" : "12:00",
+      "end" : "12:40"
+    }, {
+      "artist" : "Gaerea",
+      "start" : "13:15",
+      "end" : "14:00"
+    }, {
+      "artist" : "Decapitated",
+      "start" : "14:40",
+      "end" : "15:30"
+    }, {
+      "artist" : "Vltimas",
+      "start" : "16:10",
+      "end" : "17:00"
+    }, {
+      "artist" : "Kanonenfieber",
+      "start" : "17:40",
+      "end" : "18:40"
+    }, {
+      "artist" : "The Gathering",
+      "start" : "19:20",
+      "end" : "20:10"
+    }, {
+      "artist" : "Venom",
+      "start" : "20:50",
+      "end" : "21:50"
+    }, {
+      "artist" : "Mastodon",
+      "start" : "22:35",
+      "end" : "23:50"
+    } ],
+    "Jupiler Stage" : [ {
+      "artist" : "Kuazar",
+      "start" : "12:40",
+      "end" : "13:20"
+    }, {
+      "artist" : "King 810",
+      "start" : "14:00",
+      "end" : "14:45"
+    }, {
+      "artist" : "Wargasm",
+      "start" : "15:40",
+      "end" : "16:25"
+    }, {
+      "artist" : "Set It Off",
+      "start" : "17:25",
+      "end" : "18:10"
+    }, {
+      "artist" : "Lagwagon",
+      "start" : "19:10",
+      "end" : "20:00"
+    }, {
+      "artist" : "Bury Tomorrow",
+      "start" : "21:00",
+      "end" : "21:50"
+    }, {
+      "artist" : "The Plot In You",
+      "start" : "23:00",
+      "end" : "00:00"
+    } ],
+    "Metal Dome" : [ {
+      "artist" : "Return To Dust",
+      "start" : "12:00",
+      "end" : "12:40"
+    }, {
+      "artist" : "Zetra",
+      "start" : "13:20",
+      "end" : "14:00"
+    }, {
+      "artist" : "Rain City Drive",
+      "start" : "14:50",
+      "end" : "15:35"
+    }, {
+      "artist" : "Future Palace",
+      "start" : "16:30",
+      "end" : "17:20"
+    }, {
+      "artist" : "Periphery",
+      "start" : "18:15",
+      "end" : "19:05"
+    }, {
+      "artist" : "Sólstafir",
+      "start" : "20:05",
+      "end" : "20:55"
+    }, {
+      "artist" : "Carpenter Brut",
+      "start" : "21:55",
+      "end" : "22:55"
+    }, {
+      "artist" : "DJ Carl",
+      "start" : "01:00",
+      "end" : "04:00"
+    } ],
+    "Classic Rock Café" : [ {
+      "artist" : "AmÆzing Snäke",
+      "start" : "14:00",
+      "end" : "14:45"
+    }, {
+      "artist" : "AmÆzing Snäke",
+      "start" : "15:15",
+      "end" : "16:00"
+    }, {
+      "artist" : "AmÆzing Snäke",
+      "start" : "16:30",
+      "end" : "17:15"
+    }, {
+      "artist" : "DJ Nathachelet",
+      "start" : "00:00",
+      "end" : "02:00"
+    }, {
+      "artist" : "Rock The Fox",
+      "start" : "02:00",
+      "end" : "04:00"
+    } ]
+  }
+}
