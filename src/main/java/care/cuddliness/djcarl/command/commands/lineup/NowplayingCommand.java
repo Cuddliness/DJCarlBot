@@ -27,7 +27,7 @@ public class NowplayingCommand implements BaseCommandInterface {
 
     @Override
     public void onExecute(@NotNull Member sender, @NotNull SlashCommandInteractionEvent event) {
-        List<GraspopPerformance> performance = graspopScheduleService.nowPlaying(LocalTime.now());
+        List<GraspopPerformance> performance = graspopScheduleService.nowPlaying(LocalDateTime.now());
         if(performance.isEmpty()){
             event.reply("Your either to early, to late, or just drunk. Try again later").queue();
         }else{
