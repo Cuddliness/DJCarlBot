@@ -14,6 +14,7 @@ import java.lang.annotation.Target;
 public @interface BaseCommandComponent {
 
     @NotNull String name();
+    String description() default "Slash command";
 
 
 }

@@ -8,7 +8,7 @@ import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import org.jetbrains.annotations.NotNull;
 
-@BaseSubCommandComponent(subCommandId = "leave", parent = DinkMainCommand.class)
+@BaseSubCommandComponent(subCommandId = "leave", description = "Leave the dink pool", parent = DinkMainCommand.class)
 
 public class DinkLeaveSubCommand implements BaseSubCommandInterface {
     private final DinkService dinkService;

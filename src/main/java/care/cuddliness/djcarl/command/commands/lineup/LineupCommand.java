@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-@BaseCommandComponent(name = "lineup")
+@BaseCommandComponent(name = "lineup", description = "Check the line-up by stage and day")
 @BaseCommandOption(name = "day", description = "Return back the message from given string", type = OptionType.STRING, autoComplete = true, required = false)
 @BaseCommandOption(name = "stage", description = "Return back the message from given string", type = OptionType.STRING, autoComplete = true, required = false)
 

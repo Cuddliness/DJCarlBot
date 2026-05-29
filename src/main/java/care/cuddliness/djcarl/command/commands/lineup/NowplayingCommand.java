@@ -16,7 +16,7 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-@BaseCommandComponent(name = "nowplaying")
+@BaseCommandComponent(name = "nowplaying", description = "shows now playing on graspop's stages")
 public class NowplayingCommand implements BaseCommandInterface {
     private final GraspopScheduleService graspopScheduleService;
 

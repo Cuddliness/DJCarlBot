@@ -10,7 +10,7 @@ import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import org.jetbrains.annotations.NotNull;
 
-@BaseSubCommandComponent(subCommandId = "list", parent = DinkMainCommand.class)
+@BaseSubCommandComponent(subCommandId = "list", description = "List of all the people in the dink pool", parent = DinkMainCommand.class)
 public class DinkListSubCommand implements BaseSubCommandInterface {
     private final DinkService dinkService;
 

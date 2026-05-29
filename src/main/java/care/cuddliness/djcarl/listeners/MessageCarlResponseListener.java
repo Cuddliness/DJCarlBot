@@ -18,16 +18,16 @@ public class MessageCarlResponseListener extends ListenerAdapter {
         String[] split = event.getMessage().getContentRaw().split(" ");
         for(String s : split){
             StringUtil util = new StringUtil(s.toLowerCase());
-            if(util.isSimilar("CARL") || event.getMessage().getContentRaw().contains(" DJ CARL")){
+            if(util.isSimilar("CARL") || event.getMessage().getContentRaw().contains("DJ CARL")){
                 event.getMessage().reply("THAT IS ME! DJ CARLLLLLL!!!").queue();
                 return;
             }
-            if(util.isSimilar("Send Nudes") || event.getMessage().getContentRaw().contains(" Send Nudes")){
+            if(util.isSimilar("Send Nudes") || event.getMessage().getContentRaw().contains("Send Nudes")){
                 event.getMessage().reply("https://dxgz8kglrqnev.cloudfront.net/wp-content/uploads/2023/10/AdobeStock_648723805-scaled.jpeg").queue();
                 return;
             }
             if(util.isSimilar("DICKAAAAAH") || event.getMessage().getContentRaw().contains("DICKAAAAAH")){
-                event.getMessage().reply("https://discord.com/channels/1109033097938354256/1109033098596843534/1508538756188213458").queue();
+                event.getMessage().reply("https://youtu.be/zU9V9QMXeyc?si=SDyfhCLqE545sJrf").queue();
                 return;
             }
 
@@ -37,7 +37,7 @@ public class MessageCarlResponseListener extends ListenerAdapter {
             }
             if(util.isSimilar("feet") || event.getMessage().getContentRaw().toLowerCase().contains("feet")){
                 event.getMessage().addReaction(Emoji.fromUnicode("\uD83E\uDDB6")).queue();
-                event.getMessage().reply(":horny:").queue();
+                event.getMessage().reply("" + Emoji.fromCustom("horny", 1258521163592630282L, false )).queue();
                 return;
             }
 

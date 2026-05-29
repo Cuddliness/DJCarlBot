@@ -40,7 +40,7 @@ public class BaseCommandHandler {
             BaseCommandOption[] options = subCommand.getClass().getAnnotationsByType(BaseCommandOption.class);
 
             BaseSubCommand commandData = new BaseSubCommand(subCommand, subCommandComponent.subCommandId(),
-                    subCommandComponent.subCommandGroupid(), Arrays.stream(options).toList());
+                    subCommandComponent.description(), subCommandComponent.subCommandGroupid(), Arrays.stream(options).toList());
 
             Set<BaseSubCommand> commandSet = subCommandReferences.computeIfAbsent(subCommandComponent.parent(), k -> new HashSet<>());
             commandSet.add(commandData);
@@ -52,7 +52,7 @@ public class BaseCommandHandler {
 
             BaseCommandOption[] options = command.getClass().getAnnotationsByType(BaseCommandOption.class);
 
-            BaseCommand commandData = new BaseCommand(command, mappedSubCommands,Arrays.stream(options).toList(), commandComponent.name());
+            BaseCommand commandData = new BaseCommand(command, commandComponent.description(), mappedSubCommands,Arrays.stream(options).toList(), commandComponent.name());
             this.commandsByName.put(commandData.name(), commandData);
         }
 

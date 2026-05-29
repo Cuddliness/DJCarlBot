@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
-public record BaseCommand(@NotNull BaseCommandInterface command, Map<String, BaseSubCommand> subCommands,
+public record BaseCommand(@NotNull BaseCommandInterface command, String description,  Map<String, BaseSubCommand> subCommands,
                           List<BaseCommandOption> options, String name) {
 
     public static @NotNull Map<String, BaseSubCommand> computeSubCommands(@NotNull Collection<BaseSubCommand> subCommands) {
@@ -27,7 +27,7 @@ public record BaseCommand(@NotNull BaseCommandInterface command, Map<String, Bas
         Map<String, BaseSubCommand> map = new HashMap<>();
         List<SubcommandData> cmddata = new ArrayList<>();
         List<SubcommandGroupData> subCommandGroups = new ArrayList<>();
-        SlashCommandData commandData = Commands.slash(name, name);
+        SlashCommandData commandData = Commands.slash(name, description);
 
         this.options.forEach(option ->
                 commandData.addOption(
@@ -46,7 +46,7 @@ public record BaseCommand(@NotNull BaseCommandInterface command, Map<String, Bas
                 }
             }
 
-            SubcommandData data = new SubcommandData(subCommand.subCommandId(), "HII");
+            SubcommandData data = new SubcommandData(subCommand.subCommandId(), subCommand.description());
 
             for (SubcommandGroupData groupData : subCommandGroups) {
                 if (groupData.getName().equalsIgnoreCase(subCommand.SubCommandGroup())) {

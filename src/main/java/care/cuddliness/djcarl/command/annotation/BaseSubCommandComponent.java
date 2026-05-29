@@ -18,5 +18,6 @@ public @interface BaseSubCommandComponent {
     String subCommandId();
 
     String subCommandGroupid() default "";
+    String description() default "";
 
 }

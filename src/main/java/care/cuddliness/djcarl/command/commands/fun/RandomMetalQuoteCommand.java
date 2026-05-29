@@ -8,7 +8,7 @@ import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import org.jetbrains.annotations.NotNull;
 
-@BaseCommandComponent(name = "randommetalquote")
+@BaseCommandComponent(name = "randommetalquote", description = "Send a random metal quote to the channel")
 public class RandomMetalQuoteCommand  implements BaseCommandInterface {
     private final MetalQuoteService metalQuoteService;
 

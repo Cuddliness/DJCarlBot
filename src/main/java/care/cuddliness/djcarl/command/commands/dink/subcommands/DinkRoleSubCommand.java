@@ -11,7 +11,7 @@ import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import org.jetbrains.annotations.NotNull;
 
-@BaseSubCommandComponent(subCommandId = "roll", parent = DinkMainCommand.class)
+@BaseSubCommandComponent(subCommandId = "roll", description = "Roll a random person in the drink pool", parent = DinkMainCommand.class)
 public class DinkRoleSubCommand implements BaseSubCommandInterface {
     private final DinkService dinkService;
 
