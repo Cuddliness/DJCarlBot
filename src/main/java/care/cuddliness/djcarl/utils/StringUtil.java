@@ -8,7 +8,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class StringUtil {
-    private static final float THRESHOLD = (float) 0.65;
+    private static final float THRESHOLD = (float) 0.75;
 
     private final Logger logger = Logger.getLogger(StringUtil.class.getName());
 

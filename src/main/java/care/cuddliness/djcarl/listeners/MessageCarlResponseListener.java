@@ -18,7 +18,7 @@ public class MessageCarlResponseListener extends ListenerAdapter {
         String[] split = event.getMessage().getContentRaw().split(" ");
         for(String s : split){
             StringUtil util = new StringUtil(s.toLowerCase());
-            if(util.isSimilar("CARL") || event.getMessage().getContentRaw().contains("DJ CARL")){
+            if(util.isSimilar("DJCARL") || event.getMessage().getContentRaw().contains("DJ CARL")){
                 event.getMessage().reply("THAT IS ME! DJ CARLLLLLL!!!").queue();
                 return;
             }
