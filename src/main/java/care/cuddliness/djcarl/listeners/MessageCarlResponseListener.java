@@ -37,7 +37,7 @@ public class MessageCarlResponseListener extends ListenerAdapter {
             }
             if(util.isSimilar("feet") || event.getMessage().getContentRaw().toLowerCase().contains("feet")){
                 event.getMessage().addReaction(Emoji.fromUnicode("\uD83E\uDDB6")).queue();
-                event.getMessage().reply("" + Emoji.fromCustom("horny", 1258521163592630282L, false )).queue();
+                event.getMessage().reply("" + Emoji.fromCustom("horny", 1258521163592630282L, false ).getFormatted()).queue();
                 return;
             }
 
