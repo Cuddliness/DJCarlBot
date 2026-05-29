@@ -1,6 +1,6 @@
 package care.cuddliness.djcarl.command.commands.lineup;
 
-import care.cuddliness.djcarl.autoconfig.GraspopScheduleService;
+import care.cuddliness.djcarl.autoconfig.service.GraspopScheduleService;
 import care.cuddliness.djcarl.command.annotation.BaseCommandComponent;
 import care.cuddliness.djcarl.command.annotation.BaseCommandOption;
 import care.cuddliness.djcarl.command.data.AutoCompletableInterface;

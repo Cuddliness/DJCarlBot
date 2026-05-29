@@ -1,12 +1,10 @@
-package care.cuddliness.djcarl.autoconfig;
+package care.cuddliness.djcarl.autoconfig.service;
 
 import care.cuddliness.djcarl.graspopmanager.GraspopPerformance;
 import care.cuddliness.djcarl.graspopmanager.GraspopPerformanceRaw;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import jakarta.annotation.PostConstruct;
-import org.jsoup.nodes.Element;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -17,9 +15,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.*;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 @Service
 public class GraspopScheduleService {
@@ -40,10 +36,6 @@ public class GraspopScheduleService {
     public void loadSchedule() {
         try (InputStream is = Files.newInputStream(
                 Paths.get("graspop.json"))) {
-
-            if (is == null) {
-                throw new RuntimeException("graspop-schedule.json not found");
-            }
 
             TypeReference<Map<String, Map<String, List<GraspopPerformanceRaw>>>> type =
                     new TypeReference<>() {};

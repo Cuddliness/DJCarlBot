@@ -1,7 +1,6 @@
 package care.cuddliness.djcarl.command.commands.fun;
 
-import care.cuddliness.djcarl.autoconfig.GraspopScheduleService;
-import care.cuddliness.djcarl.autoconfig.MetalQuoteService;
+import care.cuddliness.djcarl.autoconfig.service.MetalQuoteService;
 import care.cuddliness.djcarl.command.annotation.BaseCommandComponent;
 import care.cuddliness.djcarl.command.data.BaseCommandInterface;
 import care.cuddliness.djcarl.metalquote.MetalQuote;

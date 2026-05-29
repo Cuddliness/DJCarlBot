@@ -1,6 +1,6 @@
 package care.cuddliness.djcarl.command.commands.lineup;
 
-import care.cuddliness.djcarl.autoconfig.GraspopScheduleService;
+import care.cuddliness.djcarl.autoconfig.service.GraspopScheduleService;
 import care.cuddliness.djcarl.command.annotation.BaseCommandComponent;
 import care.cuddliness.djcarl.command.data.BaseCommandInterface;
 import care.cuddliness.djcarl.graspopmanager.GraspopPerformance;
@@ -14,7 +14,6 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.Temporal;
 import java.util.List;
 
 @BaseCommandComponent(name = "nowplaying")

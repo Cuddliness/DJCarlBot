@@ -1,4 +1,4 @@
-package care.cuddliness.djcarl.autoconfig;
+package care.cuddliness.djcarl.autoconfig.service;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
