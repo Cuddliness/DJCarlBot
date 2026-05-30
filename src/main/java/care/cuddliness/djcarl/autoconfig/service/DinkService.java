@@ -1,33 +1,47 @@
 package care.cuddliness.djcarl.autoconfig.service;
 
+import care.cuddliness.djcarl.database.Repository.DinkPoolRepository;
+import care.cuddliness.djcarl.database.entity.DinkPool;
+import jakarta.transaction.Transactional;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import net.dv8tion.jda.api.entities.User;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.Random;
-
+@Component
+@RequiredArgsConstructor
 @Service
 public class DinkService {
     @Getter
     List<User> dinkusers;
 
+    private final DinkPoolRepository repository;
     private final CooldownService cooldownService;
 
-    public DinkService(CooldownService cooldownService) {
-        this.cooldownService = cooldownService;
-        dinkusers = new ArrayList<>();
+    public boolean addToDink(User user){
+        if (repository.existsByDiscordId(user.getId())) {
+            return false;
+        }
+        repository.save(DinkPool.builder().discordId(user.getId()).build());
+        return true;
     }
 
-    public void addToDink(User user){
-        dinkusers.add(user);
+    @Transactional
+    public boolean removeFromDink(User user){
+        if (!repository.existsByDiscordId(user.getId())) {
+            return false;
+        }
+        repository.deleteByDiscordId(user.getId());
+        return true;
     }
-    public void removeFromDink(User user){
-        dinkusers.add(user);
-    }
-    public boolean isInDink(User user){
-        return dinkusers.contains(user);
+
+    public List<DinkPool> getAll() {
+        return repository.findAll();
     }
     public boolean isOnCooldown(){
         return cooldownService.isOnCooldown("dink");
@@ -36,10 +50,10 @@ public class DinkService {
         return cooldownService.getRemainingTimeFormatted("dink");
     }
 
-    public User randomFromDinkAndStartCooldown(){
-        Random random = new Random();
+    public DinkPool randomFromDinkAndStartCooldown(){
+        Optional<DinkPool> d = repository.pickRandom();
         cooldownService.startCooldown("dink");
-        return dinkusers.get(random.nextInt(dinkusers.size()));
+        return d.get();
     }
 
 }

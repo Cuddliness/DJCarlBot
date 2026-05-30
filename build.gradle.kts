@@ -34,6 +34,10 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     implementation ("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
     implementation("org.jsoup:jsoup:1.22.2")
+    implementation("org.xerial:sqlite-jdbc:3.53.1.0")
+    implementation("org.springframework.boot:spring-boot-starter-validation:4.1.0-RC1")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation ("org.hibernate.orm:hibernate-community-dialects:${dependencyManagement.importedProperties["hibernate.version"]}")
 
 }
 

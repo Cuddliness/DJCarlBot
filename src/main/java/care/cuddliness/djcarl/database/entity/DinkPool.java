@@ -1,0 +1,24 @@
+package care.cuddliness.djcarl.database.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
+import lombok.*;
+
+@Entity
+@Table(
+        name = "dink_pool",
+        uniqueConstraints = @UniqueConstraint(columnNames = "discord_id")
+)
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class DinkPool extends BaseEntity {
+
+    /** Discord snowflake ID — unique, never changes, not null. */
+    @Column(name = "discord_id", nullable = false, unique = true)
+    private String discordId;
+}

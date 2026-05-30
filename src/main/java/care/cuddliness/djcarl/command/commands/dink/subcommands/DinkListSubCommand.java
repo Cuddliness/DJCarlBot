@@ -6,20 +6,23 @@ import care.cuddliness.djcarl.command.commands.dink.DinkMainCommand;
 import care.cuddliness.djcarl.command.data.BaseSubCommandInterface;
 import care.cuddliness.djcarl.utils.EmbedColor;
 import care.cuddliness.djcarl.utils.EmbedUtil;
+import lombok.RequiredArgsConstructor;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import org.jetbrains.annotations.NotNull;
+import org.springframework.stereotype.Component;
 
+import java.util.Objects;
+
+@Component
+@RequiredArgsConstructor
 @BaseSubCommandComponent(subCommandId = "list", description = "List of all the people in the dink pool", parent = DinkMainCommand.class)
 public class DinkListSubCommand implements BaseSubCommandInterface {
     private final DinkService dinkService;
 
-    public DinkListSubCommand(DinkService dinkService) {
-        this.dinkService = dinkService;
-    }
     @Override
     public void onExecute(@NotNull Member sender, @NotNull SlashCommandInteractionEvent event) {
-        if(dinkService.getDinkusers().isEmpty()){
+        if(dinkService.getAll().isEmpty()){
             event.reply("No users in the dink pool :(").queue();
             return;
         }
@@ -27,8 +30,8 @@ public class DinkListSubCommand implements BaseSubCommandInterface {
         embedUtil.setColor(EmbedColor.PRIMARY);
         embedUtil.setTitle("Dink pool members");
         StringBuilder list = new StringBuilder();
-        dinkService.getDinkusers().forEach(user -> {
-            list.append(" - ").append(user.getAsTag()).append("\n");
+        dinkService.getAll().forEach(user -> {
+            list.append(" - ").append(Objects.requireNonNull(event.getJDA().getUserById(user.getDiscordId())).getEffectiveName()).append("\n");
         });
         embedUtil.setDescription(list.toString());
         event.replyEmbeds(embedUtil.build()).queue();
