@@ -25,7 +25,6 @@ public class GraspopLineupScraper {
 
     private static final String BASE_URL = "https://www.graspop.be/nl/line-up";
 
-    /** Display name → Dutch URL slug, in day order */
     private static final Map<String, String> DAYS = new LinkedHashMap<>();
     static {
         DAYS.put("Thursday", "donderdag");
@@ -38,12 +37,6 @@ public class GraspopLineupScraper {
     private static final int POLITE_DELAY_MS  = 1_500;
     private static final String USER_AGENT    = "Mozilla/5.0 (compatible; GraspopDiscordBot/1.0)";
 
-    /**
-     * Matches the time suffix at the end of an act text:
-     *   "Ego Kill Talent 12.45 - 13.30"
-     *    ^^^^^^^^^^^^^^^^ ^^^^^   ^^^^^
-     *    group 1          group 2 group 3
-     */
     private static final Pattern ACT_PATTERN =
             Pattern.compile("^(.+?)\\s+(\\d{1,2}\\.\\d{2})\\s*-\\s*(\\d{1,2}\\.\\d{2})$");
 
@@ -57,10 +50,6 @@ public class GraspopLineupScraper {
         this.objectMapper = objectMapper;
     }
 
-    // -------------------------------------------------------------------------
-    // Startup hook
-    // -------------------------------------------------------------------------
-
     @PostConstruct
     public void startup (){
         log.info("Graspop 2026 — starting lineup scrape...");
@@ -73,14 +62,6 @@ public class GraspopLineupScraper {
         }
     }
 
-    // -------------------------------------------------------------------------
-    // Public API (also useful for manual refresh or testing)
-    // -------------------------------------------------------------------------
-
-    /**
-     * Scrapes all four days and returns the full lineup as a nested map:
-     *   day → stage → list of acts
-     */
     public Map<String, Object> scrapeFullLineup() throws IOException {
         Map<String, Object> fullLineup = new LinkedHashMap<>();
 
@@ -103,23 +84,6 @@ public class GraspopLineupScraper {
 
         return fullLineup;
     }
-
-    // -------------------------------------------------------------------------
-    // Page parsing
-    // -------------------------------------------------------------------------
-
-    /**
-     * Parses one schedule page into a map of stage → acts.
-     *
-     * The page contains a sequence of:
-     *   <h2>Stage Name</h2>
-     *   <ul>
-     *     <li><a href="...">Artist HH.MM - HH.MM</a></li>
-     *     ...
-     *   </ul>
-     *
-     * We iterate every <h2>, then walk its next sibling looking for the <ul>.
-     */
     private Map<String, List<Map<String, String>>> parseDayPage(String url) throws IOException {
         Document doc = Jsoup.connect(url)
                 .userAgent(USER_AGENT)
@@ -147,9 +111,6 @@ public class GraspopLineupScraper {
         return stageMap;
     }
 
-    /**
-     * Turns a <ul> of act <li> elements into a list of act maps.
-     */
     private List<Map<String, String>> parseActList(Element ul) {
         List<Map<String, String>> acts = new ArrayList<>();
 
@@ -168,12 +129,6 @@ public class GraspopLineupScraper {
         return acts;
     }
 
-    /**
-     * Parses a raw act string such as "Ego Kill Talent 12.45 - 13.30"
-     * into {"artist": "Ego Kill Talent", "start": "12:45", "end": "13:30"}.
-     *
-     * Returns null if the string doesn't match the expected pattern.
-     */
     private Map<String, String> parseActText(String raw) {
         Matcher m = ACT_PATTERN.matcher(raw);
         if (!m.matches()) return null;
@@ -184,10 +139,6 @@ public class GraspopLineupScraper {
         act.put("end",    normalizeTime(m.group(3)));  // "13.30" → "13:30"
         return act;
     }
-
-    // -------------------------------------------------------------------------
-    // File I/O
-    // -------------------------------------------------------------------------
 
     private void saveToJson(Map<String, Object> lineup) throws IOException {
         File outputFile = new File(outputPath);
@@ -203,10 +154,6 @@ public class GraspopLineupScraper {
         int minute = Integer.parseInt(parts[1]);
         return String.format("%02d:%02d", hour, minute);
     }
-
-    // -------------------------------------------------------------------------
-    // Utility
-    // -------------------------------------------------------------------------
 
     private void sleep(long millis) {
         try {

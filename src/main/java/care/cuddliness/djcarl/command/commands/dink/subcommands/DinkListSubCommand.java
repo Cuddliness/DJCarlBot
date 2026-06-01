@@ -31,7 +31,7 @@ public class DinkListSubCommand implements BaseSubCommandInterface {
         embedUtil.setTitle("Dink pool members");
         StringBuilder list = new StringBuilder();
         dinkService.getAll().forEach(user -> {
-            list.append(" - ").append(Objects.requireNonNull(event.getJDA().getUserById(user.getDiscordId())).getEffectiveName()).append("\n");
+            list.append(" - ").append("``").append(Objects.requireNonNull(event.getJDA().getUserById(user.getDiscordId())).getEffectiveName()).append("``").append(" since ").append("<t:").append(user.getCreatedAt().getEpochSecond()).append(":f>").append("\n");
         });
         embedUtil.setDescription(list.toString());
         event.replyEmbeds(embedUtil.build()).queue();

@@ -1,6 +1,5 @@
 package care.cuddliness.djcarl.command.commands.dink.subcommands;
 
-import care.cuddliness.djcarl.autoconfig.service.DinkService;
 import care.cuddliness.djcarl.command.annotation.BaseSubCommandComponent;
 import care.cuddliness.djcarl.command.commands.dink.DinkMainCommand;
 import care.cuddliness.djcarl.command.data.BaseSubCommandInterface;
@@ -15,12 +14,13 @@ import org.jetbrains.annotations.NotNull;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.Optional;
 
 @Component
 @RequiredArgsConstructor
+
 @BaseSubCommandComponent(subCommandId = "leaderboard", description = "Get the leaderboard of dink users", parent = DinkMainCommand.class)
 public class DinkLeaderboardSubCommand implements BaseSubCommandInterface {
+
     private final CarlUserRepository carlUserRepository;
 
     @Override
@@ -33,12 +33,12 @@ public class DinkLeaderboardSubCommand implements BaseSubCommandInterface {
         StringBuilder b = new StringBuilder();
         int number = 1;
         for(CarlUser cu : carlUserList){
-            b.append("***").append(number).append(".*** ").append(event.getJDA().getUserById(cu.getDiscordId()).getAsMention()).append("* ").append("(")
+            b.append("***").append(number).append(".*** ").append(event.getJDA().getUserById(cu.getDiscordId()).getAsMention()).append(" *").append("(")
                     .append(cu.getDinks()).append(" Dink's").append(")*\n");
             number ++;
         }
         embedUtil.setDescription(b.toString());
-        embedUtil.setThumbnail("https://cdn-icons-gif.flaticon.com/14204/14204947.gif");
+        embedUtil.setThumbnail("https://s6.imgcdn.dev/Y3xO7a.gif");
         event.replyEmbeds(embedUtil.build()).queue();
 
     }
