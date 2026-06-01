@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
-public record BaseCommand(@NotNull BaseCommandInterface command, String description,  Map<String, BaseSubCommand> subCommands,
+public record BaseCommand(@NotNull BaseCommandInterface command, String description, String group, Map<String, BaseSubCommand> subCommands,
                           List<BaseCommandOption> options, String name) {
 
     public static @NotNull Map<String, BaseSubCommand> computeSubCommands(@NotNull Collection<BaseSubCommand> subCommands) {

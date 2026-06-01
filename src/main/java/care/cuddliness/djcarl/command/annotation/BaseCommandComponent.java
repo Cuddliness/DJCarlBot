@@ -15,6 +15,7 @@ public @interface BaseCommandComponent {
 
     @NotNull String name();
     String description() default "Slash command";
+    String group() default "default";
 
 
 }
