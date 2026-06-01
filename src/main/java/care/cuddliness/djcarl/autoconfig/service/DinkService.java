@@ -1,6 +1,6 @@
 package care.cuddliness.djcarl.autoconfig.service;
 
-import care.cuddliness.djcarl.database.Repository.DinkPoolRepository;
+import care.cuddliness.djcarl.database.repository.DinkPoolRepository;
 import care.cuddliness.djcarl.database.entity.DinkPool;
 import jakarta.transaction.Transactional;
 import lombok.Getter;
@@ -9,10 +9,9 @@ import net.dv8tion.jda.api.entities.User;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.Random;
+
 @Component
 @RequiredArgsConstructor
 @Service
@@ -24,19 +23,19 @@ public class DinkService {
     private final CooldownService cooldownService;
 
     public boolean addToDink(User user){
-        if (repository.existsByDiscordId(user.getId())) {
+        if (repository.existsByDiscordId(user.getIdLong())) {
             return false;
         }
-        repository.save(DinkPool.builder().discordId(user.getId()).build());
+        repository.save(DinkPool.builder().discordId(user.getIdLong()).build());
         return true;
     }
 
     @Transactional
     public boolean removeFromDink(User user){
-        if (!repository.existsByDiscordId(user.getId())) {
+        if (!repository.existsByDiscordId(user.getIdLong())) {
             return false;
         }
-        repository.deleteByDiscordId(user.getId());
+        repository.deleteByDiscordId(user.getIdLong());
         return true;
     }
 

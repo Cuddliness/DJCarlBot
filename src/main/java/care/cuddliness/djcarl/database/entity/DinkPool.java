@@ -18,7 +18,6 @@ import lombok.*;
 @Builder
 public class DinkPool extends BaseEntity {
 
-    /** Discord snowflake ID — unique, never changes, not null. */
     @Column(name = "discord_id", nullable = false, unique = true)
-    private String discordId;
+    private Long discordId;
 }

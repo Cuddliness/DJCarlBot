@@ -1,6 +1,6 @@
 package care.cuddliness.djcarl.database.services;
 
-import care.cuddliness.djcarl.database.Repository.CarlUserRepository;
+import care.cuddliness.djcarl.database.repository.CarlUserRepository;
 import care.cuddliness.djcarl.database.entity.CarlUser;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -22,7 +22,7 @@ public class CarlUserService {
      * @param discordId Discord snowflake ID (e.g. "123456789012345678")
      */
     @Transactional
-    public CarlUser getOrCreate(String discordId) {
+    public CarlUser getOrCreate(Long discordId) {
         return carlUserRepository.findByDiscordId(discordId)
                 .orElseGet(() -> {
                     log.info("New Discord user registered: {})", discordId);
@@ -35,7 +35,7 @@ public class CarlUserService {
     }
 
     @Transactional()
-    public CarlUser getByDiscordId(String discordId) {
+    public CarlUser getByDiscordId(Long discordId) {
         return carlUserRepository.findByDiscordId(discordId)
                 .orElseThrow(() -> new IllegalArgumentException("No user found for Discord ID: " + discordId));
     }

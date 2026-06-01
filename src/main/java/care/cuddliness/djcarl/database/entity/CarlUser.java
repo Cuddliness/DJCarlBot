@@ -17,9 +17,9 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class CarlUser extends BaseEntity {
-    /** Discord snowflake ID — unique, never changes, not null. */
+
     @Column(name = "discord_id", nullable = false, unique = true)
-    private String discordId;
+    private Long discordId;
 
     @Builder.Default
     @Column(name = "dinks")

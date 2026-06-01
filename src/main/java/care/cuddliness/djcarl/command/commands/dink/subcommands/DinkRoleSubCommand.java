@@ -4,7 +4,7 @@ import care.cuddliness.djcarl.autoconfig.service.DinkService;
 import care.cuddliness.djcarl.command.annotation.BaseSubCommandComponent;
 import care.cuddliness.djcarl.command.commands.dink.DinkMainCommand;
 import care.cuddliness.djcarl.command.data.BaseSubCommandInterface;
-import care.cuddliness.djcarl.database.Repository.CarlUserRepository;
+import care.cuddliness.djcarl.database.repository.CarlUserRepository;
 import care.cuddliness.djcarl.database.entity.CarlUser;
 import care.cuddliness.djcarl.database.entity.DinkPool;
 import care.cuddliness.djcarl.database.services.CarlUserService;
@@ -39,7 +39,7 @@ public class DinkRoleSubCommand implements BaseSubCommandInterface {
         }else{
             DinkPool pool = dinkService.randomFromDinkAndStartCooldown();
             User user = event.getGuild().getJDA().getUserById(pool.getDiscordId());
-            CarlUser carlUser = carlUserService.getOrCreate(sender.getUser().getId());
+            CarlUser carlUser = carlUserService.getOrCreate(sender.getUser().getIdLong());
             carlUser.setDinks(carlUser.getDinks() + 1);
             carlUserRepository.save(carlUser);
             event.reply("Carl decided that it's " + Objects.requireNonNull(user).getAsMention() + "'s turn to gobble on some alcoholic beverage!").queue();
