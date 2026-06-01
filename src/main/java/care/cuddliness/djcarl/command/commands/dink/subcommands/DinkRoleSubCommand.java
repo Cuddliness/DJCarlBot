@@ -7,6 +7,7 @@ import care.cuddliness.djcarl.command.data.BaseSubCommandInterface;
 import care.cuddliness.djcarl.database.repository.CarlUserRepository;
 import care.cuddliness.djcarl.database.entity.CarlUser;
 import care.cuddliness.djcarl.database.entity.DinkPool;
+import care.cuddliness.djcarl.database.repository.DinkPoolRepository;
 import care.cuddliness.djcarl.database.services.CarlUserService;
 import care.cuddliness.djcarl.utils.EmbedColor;
 import care.cuddliness.djcarl.utils.EmbedUtil;
@@ -27,16 +28,33 @@ import java.util.Objects;
 public class DinkRoleSubCommand implements BaseSubCommandInterface {
     private final DinkService dinkService;
     private final CarlUserRepository carlUserRepository;
+    private final DinkPoolRepository dinkPoolRepository;
+
     private final CarlUserService carlUserService;
     @Override
     public void onExecute(@NotNull Member sender, @NotNull SlashCommandInteractionEvent event) {
+        if(dinkService.isOnTimeOut(event.getUser())){
+            event.reply("You can't roll since your on cooldown, don't forget to drink some water and rest").setEphemeral(true).queue();
+            return;
+        }
         if(dinkService.isOnCooldown()){
             EmbedUtil cooldownEmbed = new EmbedUtil();
             cooldownEmbed.setColor(EmbedColor.WARNING);
             cooldownEmbed.setTitle("Dink roll is on cooldown");
-            cooldownEmbed.setDescription(dinkService.remainingTime());
+            cooldownEmbed.setDescription(dinkService.remainingTime("dink"));
             event.replyEmbeds(cooldownEmbed.build()).queue();
         }else{
+
+            /*
+            * Here we check if the user in the dinkpool still has cooldown status in the database but is already expired.
+            * Since here above we already check if they are really on cooldown
+            *
+            * */
+            DinkPool selfUser = dinkPoolRepository.findByDiscordId(sender.getIdLong()).get();
+            if(selfUser.getTimeout() == 1){
+                selfUser.setTimeout(0);
+                dinkPoolRepository.save(selfUser);
+            }
             DinkPool pool = dinkService.randomFromDinkAndStartCooldown();
             User user = event.getGuild().getJDA().getUserById(pool.getDiscordId());
             CarlUser carlUser = carlUserService.getOrCreate(sender.getUser().getIdLong());

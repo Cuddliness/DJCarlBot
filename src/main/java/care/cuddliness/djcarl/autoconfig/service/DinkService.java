@@ -16,8 +16,6 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @Service
 public class DinkService {
-    @Getter
-    List<User> dinkusers;
 
     private final DinkPoolRepository repository;
     private final CooldownService cooldownService;
@@ -39,19 +37,40 @@ public class DinkService {
         return true;
     }
 
+    public boolean isInDinkPool(User user){
+        return repository.existsByDiscordId(user.getIdLong());
+    }
+
     public List<DinkPool> getAll() {
         return repository.findAll();
     }
     public boolean isOnCooldown(){
         return cooldownService.isOnCooldown("dink");
     }
-    public String remainingTime(){
-        return cooldownService.getRemainingTimeFormatted("dink");
+    public String remainingTime(String cooldownKey){
+        return cooldownService.getRemainingTimeFormatted(cooldownKey);
+    }
+
+    public void startTimeout(User user, int duration){
+        DinkPool dinkPool = repository.findByDiscordId(user.getIdLong()).get();
+        dinkPool.setTimeout(1);
+        repository.save(dinkPool);
+        cooldownService.startCooldown("dink_timeout_" + user.getName(), duration);
+    }
+
+    public boolean isOnTimeOut(User user){
+        return cooldownService.isOnCooldown("dink_timeout_" + user.getName());
+    }
+    public void clearTimeOut(User user){
+        DinkPool dinkPool = repository.getReferenceById(user.getIdLong());
+        dinkPool.setTimeout(0);
+        repository.save(dinkPool);
+        cooldownService.clearCooldown("dink_timeout_" + user.getName());
     }
 
     public DinkPool randomFromDinkAndStartCooldown(){
         Optional<DinkPool> d = repository.pickRandom();
-        cooldownService.startCooldown("dink");
+        cooldownService.startCooldown("dink", 30);
         return d.get();
     }
 

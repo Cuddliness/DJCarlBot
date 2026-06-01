@@ -20,4 +20,8 @@ public class DinkPool extends BaseEntity {
 
     @Column(name = "discord_id", nullable = false, unique = true)
     private Long discordId;
+
+    @Builder.Default
+    @Column(name = "timeout", nullable = false, unique = true)
+    private int timeout = 0;
 }

@@ -19,8 +19,8 @@ public class CooldownService {
     /**
      * Starts cooldown for a key/user
      */
-    public void startCooldown(String key) {
-        cooldowns.put(key, Instant.now().plus(COOLDOWN_DURATION));
+    public void startCooldown(String key, int duration) {
+        cooldowns.put(key, Instant.now().plus(Duration.ofMinutes(duration)));
     }
 
     /**

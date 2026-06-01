@@ -14,6 +14,6 @@ public interface DinkPoolRepository extends JpaRepository<DinkPool, Long> {
 
     boolean existsByDiscordId(Long discordId);
     void deleteByDiscordId(Long discordId);
-    @Query(value = "SELECT * FROM dink_pool ORDER BY RANDOM() LIMIT 1", nativeQuery = true)
+    @Query(value = "SELECT * FROM dink_pool WHERE timeout != 1 ORDER BY RANDOM() LIMIT 1;", nativeQuery = true)
     Optional<DinkPool> pickRandom();
 }
