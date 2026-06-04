@@ -18,7 +18,7 @@ public class MessageCarlResponseListener extends ListenerAdapter {
         String[] split = event.getMessage().getContentRaw().split(" ");
         for(String s : split){
             StringUtil util = new StringUtil(s.toLowerCase());
-            if(util.isSimilar("DJCARL") || event.getMessage().getContentRaw().contains("DJ CARL")){
+            if(util.isSimilar("Carl")){
                 event.getMessage().reply("THAT IS ME! DJ CARLLLLLL!!!").queue();
                 return;
             }
@@ -35,9 +35,17 @@ public class MessageCarlResponseListener extends ListenerAdapter {
                 event.getMessage().reply("SLAYERRRRRRRR!!").queue();
                 return;
             }
-            if(util.isSimilar("feet") || event.getMessage().getContentRaw().toLowerCase().contains("feet")){
+            if(util.isSimilar("feet") || event.getMessage().getContentRaw().toLowerCase().contains("feet")) {
                 event.getMessage().addReaction(Emoji.fromUnicode("\uD83E\uDDB6")).queue();
                 return;
+            }
+            if(!event.getMessage().getMentions().getMembers().isEmpty()) {
+                event.getMessage().getMentions().getMembers().forEach(member -> {
+                    System.out.println(member.getUser().getIdLong());
+                    if (member.getUser().getIdLong() == 228154846828560384L) {
+                        event.getMessage().addReaction(Emoji.fromUnicode("U+1F930")).queue();
+                    }
+                });
             }
 
         }
