@@ -40,9 +40,6 @@ public class MessageCarlResponseListener extends ListenerAdapter {
                 event.getMessage().addReaction(Emoji.fromUnicode("\uD83E\uDDB6")).queue();
                 return;
             }
-            event.getMessage().getMentions().getMentions(Message.MentionType.USER).forEach(iMentionable -> {
-                System.out.println(iMentionable.getAsMention());
-            });
         }
     }
 }
