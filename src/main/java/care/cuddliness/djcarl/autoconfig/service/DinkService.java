@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 
 @Component
 @RequiredArgsConstructor
@@ -69,9 +70,11 @@ public class DinkService {
     }
 
     public DinkPool randomFromDinkAndStartCooldown(){
-        Optional<DinkPool> d = repository.pickRandom();
-        cooldownService.startCooldown("dink", 30);
-        return d.get();
+        List<DinkPool> entries = repository.findAllEligible();
+        if (entries.isEmpty()) {
+            throw new IllegalStateException("No eligible drink pool entries found!");
+        }
+        return entries.get(new Random().nextInt(entries.size()));
     }
 
 }
