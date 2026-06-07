@@ -94,7 +94,7 @@ public class DinkRoleSubCommand implements BaseSubCommandInterface {
            }
             DinkPool pool = dinkService.randomFromDinkAndStartCooldown();
             User user = event.getGuild().getJDA().getUserById(pool.getDiscordId());
-            CarlUser carlUser = carlUserService.getOrCreate(sender.getUser().getIdLong());
+            CarlUser carlUser = carlUserService.getOrCreate(user.getIdLong());
             carlUser.setDinks(carlUser.getDinks() + 1);
             carlUserRepository.save(carlUser);
             String mention = Objects.requireNonNull(user).getAsMention();
