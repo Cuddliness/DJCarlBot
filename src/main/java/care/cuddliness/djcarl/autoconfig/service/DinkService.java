@@ -62,6 +62,7 @@ public class DinkService {
     public boolean isOnTimeOut(User user){
         return cooldownService.isOnCooldown("dink_timeout_" + user.getName());
     }
+
     public void clearTimeOut(User user){
         DinkPool dinkPool = repository.getReferenceById(user.getIdLong());
         dinkPool.setTimeout(0);
