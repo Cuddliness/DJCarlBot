@@ -2,12 +2,13 @@ package care.cuddliness.djcarl.command;
 
 import care.cuddliness.djcarl.command.annotation.BaseCommandOption;
 import care.cuddliness.djcarl.command.data.BaseCommandInterface;
+import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.interactions.commands.build.*;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
-public record BaseCommand(@NotNull BaseCommandInterface command, String description, String group, Map<String, BaseSubCommand> subCommands,
+public record BaseCommand(@NotNull BaseCommandInterface command, String description, Permission permission, String group, Map<String, BaseSubCommand> subCommands,
                           List<BaseCommandOption> options, String name) {
 
     public static @NotNull Map<String, BaseSubCommand> computeSubCommands(@NotNull Collection<BaseSubCommand> subCommands) {

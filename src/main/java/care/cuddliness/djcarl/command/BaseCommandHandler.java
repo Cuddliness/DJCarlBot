@@ -52,7 +52,7 @@ public class BaseCommandHandler {
 
             BaseCommandOption[] options = command.getClass().getAnnotationsByType(BaseCommandOption.class);
 
-            BaseCommand commandData = new BaseCommand(command, commandComponent.description(),commandComponent.group(), mappedSubCommands,Arrays.stream(options).toList(), commandComponent.name());
+            BaseCommand commandData = new BaseCommand(command, commandComponent.description(), commandComponent.permission(), commandComponent.group(), mappedSubCommands,Arrays.stream(options).toList(), commandComponent.name());
             this.commandsByName.put(commandData.name(), commandData);
         }
 

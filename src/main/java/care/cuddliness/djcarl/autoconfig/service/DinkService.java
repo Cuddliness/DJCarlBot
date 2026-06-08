@@ -75,6 +75,7 @@ public class DinkService {
         if (entries.isEmpty()) {
             throw new IllegalStateException("No eligible drink pool entries found!");
         }
+        cooldownService.startCooldown("dink", 30);
         return entries.get(new Random().nextInt(entries.size()));
     }
 

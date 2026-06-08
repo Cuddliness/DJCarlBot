@@ -7,6 +7,7 @@ import care.cuddliness.djcarl.command.annotation.BaseSubCommandComponent;
 import care.cuddliness.djcarl.command.commands.dink.DinkMainCommand;
 import care.cuddliness.djcarl.command.data.BaseSubCommandInterface;
 import lombok.RequiredArgsConstructor;
+import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
@@ -26,6 +27,10 @@ public class DinkTimeoutSubCommand implements BaseSubCommandInterface {
 
     @Override
     public void onExecute(@NotNull Member sender, @NotNull SlashCommandInteractionEvent event) {
+        if(!sender.hasPermission(Permission.MODERATE_MEMBERS)){
+            event.reply(":x: You don't have permission to run this command").setEphemeral(true).queue();
+            return;
+        }
         User user = event.getOption("user").getAsUser();
         int duration = event.getOption("duration").getAsInt();
         if(!dinkService.isInDinkPool(user)){
